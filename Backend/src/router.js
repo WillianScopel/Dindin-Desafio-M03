@@ -1,17 +1,7 @@
 const express = require('express')
-const { createUser,
-  userLogin,
-  identifyUser,
-  updateUser,
-  listCategories,
-  listTransactions,
-  registerTransaction,
-  detailTransaction,
-  getExtract,
-  updateTransaction,
-  deleteTransaction
-} = require('./controllers/user')
-
+const { createUser, userLogin, identifyUser, updateUser } = require('./controllers/user')
+const { listTransactions, registerTransaction, getExtract, detailTransaction, updateTransaction, deleteTransaction } = require('./controllers/transaction')
+const { listCategories } = require('./controllers/categories')
 const { authorization } = require('./middlewares/authorization')
 
 const router = express()
