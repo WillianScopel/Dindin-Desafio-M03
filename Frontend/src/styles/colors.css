@@ -1,0 +1,16 @@
+:root {
+  --primary: #05EDE3;
+  --purple-default: #7978D9;
+  --delft-blue: #000A4A;
+  --orange: #FA8C10;
+  --pink: #FF57D3;
+  --light-red: #FF576B;
+  --black: #000000;
+  --white: #ffffff;
+  --background-modal: rgba(61, 61, 61, 0.48);
+  --credit: #7B61FF;
+  --background-delete: #E4F2FD;
+  --button-blue: rgba(58, 159, 241, 1);
+  --button-red: rgba(255, 87, 107, 1);
+  --color-gray: gray;
+}

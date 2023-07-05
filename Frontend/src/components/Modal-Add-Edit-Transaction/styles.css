@@ -1,0 +1,60 @@
+.modal-add-edit-transaction {
+    background-color: var(--background-modal);
+    position: fixed;
+    top: 0;
+    right: 0;
+    border: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.modal-add-edit-container {
+    width: 611px;
+    height: 879px;
+
+    border-radius: 4%;
+
+    background-color: #FFFFFF;
+}
+
+.form-edit-add-transaction {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.buttons-container {
+    margin-bottom: 38px;
+}
+
+.label-form-add-edit-transaction {
+    margin-left: 64px;
+    font-size: 24px;
+    font-weight: 500;
+    align-self: flex-start;
+    font-family: var(--rubik);
+    color: var(--color-font-label);
+    margin-bottom: 8px;
+}
+
+.input-add-edit-transaction {
+    width: 485px;
+    height: 63px;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    font-family: var(--rubik);
+    font-size: 18px;
+    padding-left: 24px;
+    margin-bottom: 26px;
+}
+
+.option-add-transaction {
+    font-family: var(--rubik);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-font-label);
+}

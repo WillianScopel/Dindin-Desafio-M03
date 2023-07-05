@@ -1,0 +1,103 @@
+.form-login-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: var(--white);
+
+  width: 513px;
+  height: 535px;
+
+  position: relative;
+  bottom: 90px;
+}
+
+.form-register-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: var(--white);
+
+  width: 513px;
+  height: 610px;
+
+  position: relative;
+  bottom: 60px;
+}
+
+.form-name {
+  margin-top: 60px;
+
+  font-size: 28px;
+  font-family: var(--rubik);
+  font-weight: normal;
+
+  color: var(--purple-default);
+}
+
+.form-register-area .form-name {
+  margin-top: 15px;
+}
+
+.error-message-area {
+  height: 10px;
+}
+
+.error-message {
+  margin-top: 10px;
+
+  font-size: 14px;
+  font-family: var(--rubik);
+
+  color: var(--light-red);
+}
+
+.form-login-register {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 48px;
+}
+
+.form-register-area .form-login-register {
+  margin-top: 20px;
+}
+
+.label-form-login-register {
+  font-size: 18px;
+
+  font-family: var(--rubik);
+
+  margin-bottom: 8px;
+}
+
+.input-for-login-register {
+  width: 449px;
+  height: 63px;
+
+  border: 1px solid #555555;
+  border-radius: 5px;
+
+  font-family: var(--rubik);
+  font-size: 18px;
+
+  padding-left: 10px;
+  margin-bottom: 31px;
+}
+
+.form-register-area .input-for-login-register {
+  margin-bottom: 10px;
+}
+
+.user-have-account {
+  margin-top: 12px;
+
+  font-size: 14px;
+  font-family: var(--lato);
+  font-style: bold;
+
+  color: var(--purple-default);
+
+  cursor: pointer;
+}

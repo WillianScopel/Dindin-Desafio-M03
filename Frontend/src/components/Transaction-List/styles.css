@@ -1,0 +1,131 @@
+.box-transactions {
+    width: 964px;
+    height: 58px;
+    margin-top: 26px;
+    margin-left: 102px;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    background: #FAFAFA;
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-family: var(--lato);
+    font-size: 14px;
+    border-bottom: 1px solid rgba(224, 224, 224, 1);
+}
+
+.width-data {
+    width: 100px;
+    font-weight: 700;
+}
+
+.width-day {
+    width: 115px;
+    text-align: center;
+}
+
+.width-description {
+    width: 255px;
+    text-align: center;
+}
+
+.width-value {
+    width: 165px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.width-category {
+    width: 160px;
+    text-align: center;
+}
+
+.margin-top {
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(224, 224, 224, 1);
+}
+
+.cabeçalho-linha {
+    min-width: 964px;
+    display: flex;
+    padding-left: 50px;
+}
+
+.cabeçalho {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.margin-top-20px {
+    margin-top: 20px;
+}
+
+.cabeçalho-linha .fonts {
+    font-family: var(--lato);
+    font-size: 14px;
+}
+
+.credit {
+    color: var(--credit);
+}
+
+.debit {
+    color: var(--orange);
+}
+
+.edit-icon {
+    margin-right: 23.5px;
+}
+
+.edit-icon,
+.delete-icon {
+    cursor: pointer;
+}
+
+.del-confirmation {
+    width: 111px;
+    height: 46px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 4px;
+    background-color: var(--background-delete);
+    left: 910px;
+}
+
+.span-delete {
+    font-family: var(--rubik);
+    font-weight: 300;
+    font-size: 10px;
+}
+
+
+.btn-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+
+.btn-small {
+    width: 37px;
+    height: 15px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-family: var(--rubik);
+    font-size: 9px;
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+}
+
+.background-blue {
+    background-color: var(--button-blue);
+}
+
+.background-red {
+    background-color: var(--button-red);
+}

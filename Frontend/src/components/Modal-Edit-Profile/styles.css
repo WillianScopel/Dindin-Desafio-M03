@@ -1,0 +1,71 @@
+.modal-edit-profile {
+  background-color: var(--background-modal);
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+
+}
+
+.modal-container {
+  width: 611px;
+  height: 770px;
+
+  border-radius: 4%;
+
+  background-color: #FFFFFF;
+}
+
+.close-icon {
+  position: relative;
+  top: 67px;
+  margin-left: 509px;
+  cursor: pointer;
+}
+
+.h1-modal {
+  font-family: var(--rubik);
+  margin-top: 56px;
+  margin-bottom: 48px;
+}
+
+
+.form-edit-profile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.h1-modal,
+.label-form-edit-profile {
+  margin-left: 64px;
+}
+
+.label-form-edit-profile {
+  font-size: 24px;
+  font-weight: 500;
+  align-self: flex-start;
+  font-family: var(--rubik);
+  margin-bottom: 8px;
+  color: var(--color-font-label);
+}
+
+.input-edit-profile {
+  width: 485px;
+  height: 63px;
+
+  border: 1px solid #555555;
+  border-radius: 5px;
+
+  font-family: var(--rubik);
+  font-size: 18px;
+
+  padding-left: 24px;
+  margin-bottom: 26px;
+}

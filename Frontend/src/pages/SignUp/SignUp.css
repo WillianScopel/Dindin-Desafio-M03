@@ -1,0 +1,49 @@
+.container-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  margin-top: 94px;
+
+  gap: 100px;
+
+  width: 92%;
+}
+
+.info-to-user {
+  width: 620px;
+  height: 350px;
+}
+
+.user-message-principal {
+  font-family: var(--rubik);
+  font-size: 52px;
+
+  color: var(--white);
+}
+
+.user-message-secundary {
+  margin-top: 33px;
+
+  font-family: var(--rubik);
+  font-size: 28px;
+  font-weight: normal;
+
+  color: var(--white);
+
+  width: 600px;
+}
+
+.user-message-principal-emphasis {
+  color: var(--purple-default);
+}
+
+.user-login-area {
+  width: 500px;
+}

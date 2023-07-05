@@ -1,0 +1,59 @@
+.button-option {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 140px;
+  height: 20px;
+
+  padding: 10px;
+
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+
+  border: none;
+  border-radius: 8px;
+
+
+
+  cursor: pointer;
+}
+
+.unselect {
+  background-color: var(--ligth-white);
+  color: var(--black);
+}
+
+.select {
+  background-color: var(--purple-default);
+  color: var(--white);
+}
+
+.button-option:hover {
+  scale: 1.04;
+}
+
+.categories-for-filter {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+
+  width: 905px;
+}
+
+.option-name {
+  font-size: 10px;
+  font-family: var(--rubik);
+  font-weight: normal;
+}
+
+.option-symbol {
+  font-size: 10px;
+  font-family: var(--rubik);
+  font-weight: normal;
+}

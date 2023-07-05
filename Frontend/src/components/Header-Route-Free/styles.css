@@ -1,0 +1,50 @@
+.header-route-free {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100vw;
+  height: 125px;
+}
+
+.background-color {
+  background: linear-gradient(90deg, rgba(5, 237, 227, 1) 0%, rgba(89, 113, 248, 1) 100%, rgba(100, 96, 251, 1) 100%);
+}
+
+.logo-header {
+  width: 165px;
+  height: 45px;
+
+  margin-left: 100px;
+}
+
+.box-profile {
+  width: 138px;
+  height: 56px;
+  margin-right: 100px;
+  cursor: pointer;
+  display: flex;
+}
+
+.icon-avatar {
+  width: 56px;
+  height: 56px;
+}
+
+.box-profile span {
+  align-self: center;
+
+  font-family: var(--rubik);
+  font-size: 17px;
+
+  margin-left: 7px;
+
+  color: var(--white);
+}
+
+.icon-logout {
+  width: 22px;
+  height: 27px;
+  margin-left: 16px;
+  align-self: center;
+}
