@@ -23,7 +23,6 @@ function ModalAddEditTransaction({ setShowModalAddEditTransaction, h1modal, list
         setForm({ ...form, tipo: type });
     }
 
-
     async function handleAddEditTransaction() {
         if (!form.valor || !form.categoria_id || !form.data || !form.descricao) {
             return
@@ -70,7 +69,7 @@ function ModalAddEditTransaction({ setShowModalAddEditTransaction, h1modal, list
                             name='tipo'
                             value={form.tipo}
                             content={'Entrada'}
-                            colorAddEditModal={form.tipo === 'entrada' ? 'color-blue' : 'color-gray'}
+                            colorAddEditModal={form.tipo == 'entrada' ? 'color-blue' : 'color-gray'}
                             defaultFunction={() => handlechangeType('entrada')}
                         />
                         <ButtonDefault
