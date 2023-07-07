@@ -58,7 +58,6 @@ function TransactionList({ setTransacionsList, transactions, getWeekDay, correct
     setShowModalEditTransaction(true)
   }
 
-
   return (
     <div className='box-transactions'>
       <div className='cabeçalho'>

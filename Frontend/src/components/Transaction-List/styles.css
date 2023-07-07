@@ -1,9 +1,6 @@
 .box-transactions {
     width: 964px;
     height: 58px;
-    margin-top: 26px;
-    margin-left: 102px;
-    background-color: gray;
     display: flex;
     flex-direction: column;
     background: #FAFAFA;

@@ -7,10 +7,9 @@ import { correctValue } from '../../utils/utils';
 
 function ModalAddEditTransaction({ setShowModalAddEditTransaction, h1modal, listCategories, setTransacionsList, setShowModalEditTransaction, transactionToEdit, setExtract }) {
     const [transactionType, setTransactionType] = useState(transactionToEdit.tipo)
-
     const [form, setForm] = useState(
         {
-            valor: correctValue(transactionToEdit?.valor) === 'R$ NaN' ? '' : correctValue(transactionToEdit?.valor),
+            valor: transactionToEdit.valor === undefined ? 'R$ ' : correctValue(transactionToEdit?.valor),
             data: !transactionToEdit.data ? '' : transactionToEdit.data.split('T', 1)[0],
             descricao: transactionToEdit?.descricao ?? '',
             tipo: transactionType ?? 'saida',

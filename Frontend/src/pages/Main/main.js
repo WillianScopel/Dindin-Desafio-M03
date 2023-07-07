@@ -88,7 +88,7 @@ function Main() {
       >
       </HeaderFreeRoute>
 
-      <main className='main-page-main'>
+      <main className='main-page-main border-radius-header'>
         <div className='content-page-main'>
           <div className='filter-and-transactions'>
             <div className='filter-on-main'>
