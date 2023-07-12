@@ -2,7 +2,7 @@ import './styles.css'
 import EditIcon from '../../assets/edit-icon.svg'
 import DeleteIcon from '../../assets/delete-icon.svg'
 import { correctValue } from '../../utils/utils';
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import api from '../../services/api';
 import IconOrder from '../../assets/order.png'
 import ModalAddEditTransaction from '../../components/Modal-Add-Edit-Transaction';
@@ -23,8 +23,8 @@ function TransactionList({ setTransacionsList, transactions, getWeekDay, correct
   }
 
   function handleShowDeletePopUp(e, transacaoID) {
-    e.stopPropagation();
-    setShowDeletePopUp(transacaoID);
+    e.stopPropagation()
+    setShowDeletePopUp(transacaoID)
   }
 
   function handleNoDelete(e) {
@@ -38,10 +38,12 @@ function TransactionList({ setTransacionsList, transactions, getWeekDay, correct
     try {
       const response = await api.delete(`/transacao/${id}`, { headers: { 'authorization': `Bearer ${token}` } });
       const responseTransaction = await api.get(`/transacao`, { headers: { 'authorization': `Bearer ${token}` } })
+      const responseExtract = await api.get(`/transacao/extrato`, { headers: { 'authorization': `Bearer ${token}` } })
       setTransacionsList(responseTransaction.data)
-      handleShowDeletePopUp(e);
+      handleShowDeletePopUp(e)
+      setExtract(responseExtract.data)
     } catch (error) {
-      console.log(error);
+      console.log(error)
     }
   }
 
