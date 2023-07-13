@@ -1,4 +1,4 @@
-import './styles.css';
+import './styles.css'
 import '../../styles/global.css'
 import '../../styles/colors.css'
 import '../../styles/fonts.css'
@@ -7,7 +7,7 @@ function ButtonDefault({ width, content, height, marginTop, defaultFunction, col
 
   if (!height) {
     height = 48
-  };
+  }
 
   return (
     <button
@@ -24,4 +24,4 @@ function ButtonDefault({ width, content, height, marginTop, defaultFunction, col
   )
 }
 
-export default ButtonDefault;
+export default ButtonDefault

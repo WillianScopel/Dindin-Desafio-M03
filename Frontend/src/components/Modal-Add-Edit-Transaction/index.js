@@ -1,9 +1,9 @@
 import './styles.css'
 import closeIconModal from '../../assets/close-icon-modal.svg'
-import ButtonDefault from '../Button-Default/';
-import { forwardRef, useState } from 'react';
-import api from '../../services/api';
-import { correctValue } from '../../utils/utils';
+import ButtonDefault from '../Button-Default/'
+import { forwardRef, useState } from 'react'
+import api from '../../services/api'
+import { correctValue } from '../../utils/utils'
 
 function ModalAddEditTransaction({ setShowModalAddEditTransaction, h1modal, listCategories, setTransacionsList, setShowModalEditTransaction, transactionToEdit, setExtract }) {
     const [transactionType, setTransactionType] = useState(transactionToEdit.tipo)
@@ -15,11 +15,11 @@ function ModalAddEditTransaction({ setShowModalAddEditTransaction, h1modal, list
             tipo: transactionType ?? 'saida',
             categoria_id: transactionToEdit?.categoria_id ?? 0
         },
-    );
+    )
 
     function handlechangeType(type) {
         setTransactionType(type)
-        setForm({ ...form, tipo: type });
+        setForm({ ...form, tipo: type })
     }
 
     async function handleAddEditTransaction() {
@@ -34,7 +34,7 @@ function ModalAddEditTransaction({ setShowModalAddEditTransaction, h1modal, list
             }
 
             if (h1modal === 'Editar Registro') {
-                const responseUpadate = await api.put(`/transacao/${transactionToEdit.id_transacao}`, form, { headers: { 'authorization': `Bearer ${token}` } });
+                const responseUpadate = await api.put(`/transacao/${transactionToEdit.id_transacao}`, form, { headers: { 'authorization': `Bearer ${token}` } })
             }
             const responseTransaction = await api.get(`/transacao`, { headers: { 'authorization': `Bearer ${token}` } })
             const responseExtract = await api.get(`/transacao/extrato`, { headers: { 'authorization': `Bearer ${token}` } })
@@ -42,14 +42,14 @@ function ModalAddEditTransaction({ setShowModalAddEditTransaction, h1modal, list
             setExtract(responseExtract.data)
             setShowModalAddEditTransaction(false)
         } catch (error) {
-            console.log(error.message);
+            console.log(error.message)
         }
     }
 
 
     function handleChangeForm(e) {
-        const value = e.target.value;
-        setForm({ ...form, [e.target.name]: value });
+        const value = e.target.value
+        setForm({ ...form, [e.target.name]: value })
     }
     return (
         <div className='modal-add-edit-transaction'>
