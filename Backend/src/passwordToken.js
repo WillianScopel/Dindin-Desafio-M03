@@ -1,1 +1,1 @@
-module.exports = 'secretpassword'
+module.exports = 'insira sua frase secreta'

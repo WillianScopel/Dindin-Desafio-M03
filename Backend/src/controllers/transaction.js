@@ -19,6 +19,7 @@ const registerTransaction = async (req, res) => {
     const { tipo, descricao, valor, data, categoria_id } = req.body
     const { id } = req.user
 
+
     if (!descricao || !valor || !data || !categoria_id || !tipo) {
         return res.status(400).json({ mensagem: "Todos os campos são obrigatórios" })
     }
@@ -38,7 +39,7 @@ const registerTransaction = async (req, res) => {
         const registredTransactionQuery = `INSERT INTO transacoes 
         (descriçao, valor, data, categoria_id, usuario_id, tipo) 
         VALUES($1, $2, $3, $4, $5, $6) RETURNING *`
-        const registredTransaction = await pool.query(registredTransactionQuery, [descricao, valor, data, categoria_id, id, tipo])
+        const registredTransaction = await pool.query(registredTransactionQuery, [descricao, valueInCents(valor), data, categoria_id, id, tipo])
 
         if (registredTransaction.rowCount <= 0) {
             return res.status(400).json({ mensagem: "Cadastro da transação falhou" })
