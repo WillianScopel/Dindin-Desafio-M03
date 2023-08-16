@@ -1,14 +1,13 @@
-import './styles.css';
+import './styles.css'
 import '../../styles/global.css'
 import '../../styles/colors.css'
 import Logo from '../../assets/Logo.png'
 import AvatarIcon from '../../assets/avatar-profile-icon.svg'
 import IconLogout from '../../assets/icon-logout.svg'
-import { useEffect, useState } from 'react';
-import ModalEditProfile from '../Modal-Edit-Profile/index'
-import api from '../../services/api';
-import { useNavigate } from 'react-router-dom';
-import { firstName } from '../../utils/utils';
+import { useEffect, useState } from 'react'
+import api from '../../services/api'
+import { useNavigate } from 'react-router-dom'
+import { firstName } from '../../utils/utils'
 
 function HeaderFreeRoute({ logged, setShowModalState }) {
   const navigate = useNavigate()
@@ -62,7 +61,7 @@ function HeaderFreeRoute({ logged, setShowModalState }) {
         </div>
       }
     </header >
-  );
+  )
 }
 
-export default HeaderFreeRoute;
+export default HeaderFreeRoute

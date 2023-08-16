@@ -1,15 +1,15 @@
-import './main.css';
+import './main.css'
 import '../../styles/global.css'
 import '../../styles/colors.css'
 import '../../styles/fonts.css'
-import HeaderFreeRoute from '../../components/Header-Route-Free';
+import HeaderFreeRoute from '../../components/Header-Route-Free'
 import ModalEditProfile from '../../components/Modal-Edit-Profile/index'
-import TransactionList from '../../components/Transaction-List';
-import ButtonDefault from '../../components/Button-Default';
-import ModalAddEditTransaction from '../../components/Modal-Add-Edit-Transaction';
-import Filter from '../../components/Filter';
-import { useEffect, useState } from 'react';
-import api from '../../services/api';
+import TransactionList from '../../components/Transaction-List'
+import ButtonDefault from '../../components/Button-Default'
+import ModalAddEditTransaction from '../../components/Modal-Add-Edit-Transaction'
+import Filter from '../../components/Filter'
+import { useEffect, useState } from 'react'
+import api from '../../services/api'
 import { balanceCalc, correctDate, correctValue, getWeekday, orderByDateAsc, orderByDateDesc } from '../../utils/utils'
 
 
@@ -19,7 +19,7 @@ function Main() {
   const [listCategories, setListCategories] = useState([])
   const [transactions, setTransacionsList] = useState([])
   const [extract, setExtract] = useState([])
-  const [ascOrDesc, setAscOrDesc] = useState(false);
+  const [ascOrDesc, setAscOrDesc] = useState(false)
   const [filtredTransactions, setFiltredTransactions] = useState([])
   const [startFilter, setStatFilter] = useState(false)
   const [baseSearch, setBaseSearch] = useState([])
@@ -36,48 +36,37 @@ function Main() {
   async function handleTransactionsList() {
     const token = localStorage.getItem('token')
 
-    try {
-      const response = await api.get(`/transacao`,
-        { headers: { 'authorization': `Bearer ${token}` } }
-      )
+    const response = await api.get(`/transacao`,
+      { headers: { 'authorization': `Bearer ${token}` } }
+    )
 
-      setBaseSearch(response.data)
+    setBaseSearch(response.data)
 
-      if (startFilter || filtredTransactions.length > 0) {
-        setTransacionsList(ascOrDesc ? orderByDateAsc(filtredTransactions) : orderByDateDesc(filtredTransactions))
-        return
-      }
-
-      setTransacionsList(ascOrDesc ? orderByDateAsc(response.data) : orderByDateDesc(response.data))
-
-    } catch (error) {
+    if (startFilter || filtredTransactions.length > 0) {
+      setTransacionsList(ascOrDesc ? orderByDateAsc(filtredTransactions) : orderByDateDesc(filtredTransactions))
+      return
     }
+
+    setTransacionsList(ascOrDesc ? orderByDateAsc(response.data) : orderByDateDesc(response.data))
   }
 
   async function handleListCategories() {
-    try {
-      const token = localStorage.getItem('token')
+    const token = localStorage.getItem('token')
 
-      const response = await api.get('/categoria', {
-        headers: { 'authorization': `Bearer ${token}` }
-      })
-      setListCategories(response)
+    const response = await api.get('/categoria', {
+      headers: { 'authorization': `Bearer ${token}` }
+    })
+    setListCategories(response)
 
-    } catch (error) {
-      console.log(error);
-    }
   }
 
   async function handleGetExtract() {
     const token = localStorage.getItem('token')
 
-    try {
-      const response = await api.get(`/transacao/extrato`,
-        { headers: { 'authorization': `Bearer ${token}` } }
-      )
-      setExtract(response.data)
-    } catch (error) {
-    }
+    const response = await api.get(`/transacao/extrato`,
+      { headers: { 'authorization': `Bearer ${token}` } }
+    )
+    setExtract(response.data)
   }
 
   return (
@@ -165,7 +154,7 @@ function Main() {
         </div>
       </main >
     </div >
-  );
+  )
 }
 
-export default Main;
+export default Main

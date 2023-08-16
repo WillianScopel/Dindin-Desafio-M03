@@ -1,8 +1,8 @@
 import './styles.css'
 import closeIconModal from '../../assets/close-icon-modal.svg'
-import ButtonDefault from '../Button-Default/';
-import { useState } from 'react';
-import api from '../../services/api';
+import ButtonDefault from '../Button-Default/'
+import { useState } from 'react'
+import api from '../../services/api'
 
 
 function ModalEditProfile({ setShowModalEditProfileState }) {
@@ -17,17 +17,17 @@ function ModalEditProfile({ setShowModalEditProfileState }) {
       senha: '',
       confirmPassword: ''
     }
-  );
+  )
 
   function handleChangeForm(e) {
-    const value = e.target.value;
-    setErrorMessage('');
-    setForm({ ...form, [e.target.name]: value });
+    const value = e.target.value
+    setErrorMessage('')
+    setForm({ ...form, [e.target.name]: value })
   }
 
   async function handleEditProfile() {
     if (form.senha !== form.confirmPassword) {
-      return;
+      return
     }
     try {
       const userDataUpdate = {
@@ -45,7 +45,7 @@ function ModalEditProfile({ setShowModalEditProfileState }) {
       localStorage.setItem('email', `${userDataUpdate.email}`)
       setShowModalEditProfileState(false)
     } catch (error) {
-      console.log(error);
+      console.log(error)
     }
   }
 

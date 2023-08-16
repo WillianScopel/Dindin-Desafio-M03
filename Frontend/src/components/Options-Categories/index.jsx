@@ -1,8 +1,8 @@
-import './styles.css';
-import '../../styles/global.css';
-import '../../styles/colors.css';
-import '../../styles/fonts.css';
-import { useEffect, useState } from 'react';
+import './styles.css'
+import '../../styles/global.css'
+import '../../styles/colors.css'
+import '../../styles/fonts.css'
+import { useEffect, useState } from 'react'
 
 
 function OptionsCategories({ nome, setOptionSelected, optionSelected, optionsForRender, clearFilter }) {

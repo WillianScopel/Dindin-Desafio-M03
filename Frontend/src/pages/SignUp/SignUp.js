@@ -1,17 +1,17 @@
-import './SignUp.css';
-import '../../styles/global.css'
+import './SignUp.css'
 import '../../styles/colors.css'
 import '../../styles/fonts.css'
-import HeaderFreeRoute from '../../components/Header-Route-Free';
-import ButtonDefault from '../../components/Button-Default';
-import FormLoginRegister from '../../components/Form-Login-Register';
-import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import HeaderFreeRoute from '../../components/Header-Route-Free'
+import ButtonDefault from '../../components/Button-Default'
+import FormLoginRegister from '../../components/Form-Login-Register'
+import { useEffect, useState } from 'react'
+import '../../styles/global.css'
+import { useNavigate } from 'react-router-dom'
 
 function SignUp() {
   const navigate = useNavigate()
 
-  const [mode, setMode] = useState('login');
+  const [mode, setMode] = useState('login')
 
   const [errorMessage, setErrorMessage] = useState('')
 
@@ -22,7 +22,7 @@ function SignUp() {
       senha: '',
       confirmacaoSenha: ''
     }
-  );
+  )
 
   function handleChangeModeToRegister() {
     setMode('register')
@@ -80,7 +80,7 @@ function SignUp() {
 
       </main>
     </div>
-  );
+  )
 }
 
-export default SignUp;
+export default SignUp

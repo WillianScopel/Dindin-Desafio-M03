@@ -1,4 +1,5 @@
 :root {
   --rubik: 'Rubik', sans-serif;
   --lato: 'Lato', sans-serif;
+  min-height: 100vh;
 }

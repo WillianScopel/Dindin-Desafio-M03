@@ -1,13 +1,13 @@
-import './styles.css';
-import '../../styles/global.css'
+import './styles.css'
 import '../../styles/colors.css'
 import '../../styles/fonts.css'
+import '../../styles/global.css'
 
 function ButtonDefault({ width, content, height, marginTop, defaultFunction, colorAddEditModal }) {
 
   if (!height) {
     height = 48
-  };
+  }
 
   return (
     <button
@@ -24,4 +24,4 @@ function ButtonDefault({ width, content, height, marginTop, defaultFunction, col
   )
 }
 
-export default ButtonDefault;
+export default ButtonDefault

@@ -1,12 +1,11 @@
-import './styles.css';
-import '../../styles/global.css';
-import '../../styles/colors.css';
-import '../../styles/fonts.css';
+import './styles.css'
+import '../../styles/global.css'
+import '../../styles/colors.css'
+import '../../styles/fonts.css'
 import ImagemFiltro from '../../assets/filter.png'
-import { useEffect, useState } from 'react';
-import OptionsCategories from '../Options-Categories';
-import api from '../../services/api';
-
+import { useEffect, useState } from 'react'
+import OptionsCategories from '../Options-Categories'
+import api from '../../services/api'
 
 function Filter({ baseSearch, handleTransactionsList, setFiltredTransactions, startFilter, setStatFilter }) {
   const [filter, setFilter] = useState(false)
@@ -64,7 +63,7 @@ function Filter({ baseSearch, handleTransactionsList, setFiltredTransactions, st
 
     setTimeout(() => {
       setClearFilter(false)
-    }, 50);
+    }, 50)
 
   }
 
@@ -77,7 +76,7 @@ function Filter({ baseSearch, handleTransactionsList, setFiltredTransactions, st
 
     setTimeout(() => {
       setStatFilter(false)
-    }, 50);
+    }, 50)
   }
 
   return (
