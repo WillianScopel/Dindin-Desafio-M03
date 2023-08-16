@@ -1,12 +1,12 @@
-import './SignUp.css'
-import '../../styles/colors.css'
-import '../../styles/fonts.css'
-import HeaderFreeRoute from '../../components/Header-Route-Free'
+import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import ButtonDefault from '../../components/Button-Default'
 import FormLoginRegister from '../../components/Form-Login-Register'
-import { useEffect, useState } from 'react'
+import HeaderFreeRoute from '../../components/Header-Route-Free'
+import '../../styles/colors.css'
+import '../../styles/fonts.css'
 import '../../styles/global.css'
-import { useNavigate } from 'react-router-dom'
+import './SignUp.css'
 
 function SignUp() {
   const navigate = useNavigate()
