@@ -2,7 +2,7 @@ const knex = require('../connection')
 const bcrypt = require('bcrypt')
 const jwt = require("jsonwebtoken")
 const secretPassword = require('../passwordToken')
-const { number } = require('joi')
+
 
 const createUser = async (req, res) => {
     const { nome, email, senha } = req.body
@@ -41,7 +41,7 @@ const userLogin = async (req, res) => {
 
     try {
         const user = await knex('usuarios').where({ email: email }).first()
-        console.log(user);
+
         if (!user) {
             return res.status(400).json({ mensagem: "E-mail ou senha incorretos." })
         }
