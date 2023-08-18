@@ -1,4 +1,4 @@
-const pool = require("../connection")
+const knex = require("../connection")
 const jwt = require("jsonwebtoken")
 const secretPassword = require("../passwordToken")
 
@@ -12,14 +12,13 @@ const authorization = async (req, res, next) => {
     try {
         const token = authorization.split(" ")[1]
         const { id } = jwt.verify(token, secretPassword)
-        const loginQuery = "SELECT * FROM usuarios WHERE id = $1"
-        const { rowCount, rows } = await pool.query(loginQuery, [id])
+        const user = await knex('usuarios').where({ id: id }).first()
 
-        if (rowCount <= 0) {
+        if (!user) {
             return res.status(401).json({ mensagem: "Nao autorizado." })
         }
 
-        const { senha: _, ...userData } = rows[0]
+        const { senha: _, ...userData } = user
 
         req.user = userData
 

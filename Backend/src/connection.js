@@ -1,11 +1,12 @@
-const { Pool } = require('pg')
-
-const pool = new Pool({
-    host: 'localhost ou host onde o DB está hospedado',
-    port: 5432,
-    user: 'seu-usuario',
-    password: 'senha do DB',
-    database: 'dindin',
+const knex = require('knex')({
+    client: 'pg',
+    connection: {
+        host: 'localhost',
+        port: 5432,
+        user: 'postgres',
+        password: 'wans1106',
+        database: 'dindin',
+    }
 })
 
-module.exports = pool
+module.exports = knex

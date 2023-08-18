@@ -3,10 +3,11 @@ const { createUser, userLogin, identifyUser, updateUser } = require('./controlle
 const { listTransactions, registerTransaction, getExtract, detailTransaction, updateTransaction, deleteTransaction } = require('./controllers/transaction')
 const { listCategories } = require('./controllers/categories')
 const { authorization } = require('./middlewares/authorization')
-
+const validateBodyrequisition = require('./middlewares/bodyRequisition')
+const userSchema = require('./validations/userSchema')
 const router = express()
 
-router.post('/usuario', createUser)
+router.post('/usuario', validateBodyrequisition(userSchema), createUser)
 router.post('/login', userLogin)
 
 
